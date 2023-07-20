@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  font-family: "Ms Madi";
+  font-size: 150px;
+  font-weight: 500;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+}
+
+.card {
+  height: 400px;
+  width: 400px;
+  background-color: #5cc0ff;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.card:hover {
+  transform: scale(1.07);
+}
+
+.card img {
+  width: 90%;
+  max-height: auto;
+  opacity: 0%;
+  transition: 0.3s all ease;
+}
+
+.card.clicked {
+  background-color: #ffbdfd;
+}
+
+.card.right {
+  background-color: lime;
+}
+
+.card.clicked img,
+.card.right img {
+  opacity: 1;
+}
+
+.card.wrong {
+  background-color: #ff0000;
+}
